@@ -1,0 +1,554 @@
+@font-face {
+    font-family: ar-font;
+    src: url(../fonts/Cairo-Regular.ttf);
+}
+body {
+    font-family: ar-font;
+    direction: rtl;
+}
+header {
+    background-image: url(../imgs/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+header .overlay {
+    background: linear-gradient(to right,
+                rgba(55, 156, 156, 0.8) 0%,
+                rgba(169, 170, 46, 0.8) 100%
+    );
+    height: 100vh;
+}
+
+/* Start Navbar */
+.fixed-top {
+    z-index: 10;
+}
+nav .navbar-brand img {
+    width: 80%;
+} 
+nav ul.navbar-nav {
+    margin-right: auto
+}
+nav ul.navbar-nav li.nav-item a.nav-link {
+    color: #e8e8e8;
+    font-size: 16px;
+    line-height: 40px;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    transition: all 0.5s ease;
+}
+nav ul.navbar-nav li.nav-item a.nav-link:hover,
+nav ul.navbar-nav li.nav-item a.nav-link.active{
+    background-color: #fff;
+    color: #16aeca;
+}
+nav.navbar.noTransparent li.nav-item a.nav-link {
+    color: #16aeca;
+}
+nav.navbar.noTransparent li.nav-item a.nav-link:hover,
+nav.navbar.noTransparent li.nav-item a.nav-link.active {
+    background-color: #16aeca;
+    color: #dae413;
+}
+nav.navbar.noTransparent {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+nav.navbar button.navbar-toggler {
+    transition: all 1s ease;
+}
+nav.navbar button.navbar-toggler span {
+    color: #fff;
+}
+/* End Navbar */
+
+/* Start Header */
+header .overlay .slider .carousel-inner .carousel-item {
+    min-height: 100vh;
+    transition: all 0.5s ease-in-out;
+    
+}
+header .slider .carousel-item .carousel-caption h3 {
+    font-size: 40px;
+    font-family: ar-font;
+    line-height: 60px;
+    color: #fff;
+    margin-bottom: 55px;
+}
+header .overlay .slider .carousel-inner .carousel-item .carousel-caption {
+    bottom: 30%;
+}
+header .overlay .slider .carousel-inner .carousel-item .carousel-caption a {
+    font-size: 18px;
+    color: #fff;
+    background-color: #16aeca;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+}
+header .overlay .slider .carousel-inner .carousel-item .carousel-caption a:hover {
+    background-color: #dae413;
+    color: #555;
+}
+header .overlay .slider .carousel-control-prev .fa-angle-left,
+header .overlay .slider .carousel-control-next .fa-angle-right {
+    border: 2px solid #fff;
+    border-radius: 3px;
+    padding: 30px 20px;
+}
+header .overlay .slider .carousel-control-prev {
+    left: 20px;
+    text-decoration: none;
+}
+header .overlay .slider .carousel-control-next {
+    right: 20px;
+    text-decoration: none;
+}
+header .overlay .slider .carousel-control-prev,
+header .overlay .slider .carousel-control-next {
+    width: auto;
+}
+/* End Header */
+
+/* Start Section.services */
+section.services{
+    padding-top: 120px;
+}
+section.services h3 {
+    font-size: 40px;
+    color: #070c0c;
+    margin-bottom: 50px;
+}
+section.services .card {
+    height: 270px;
+    transition: all 1s ease;
+}
+section.services .card:hover {
+    height: 350px;
+}
+section.services .card img {
+    width: 140px;
+    margin: 10px auto;
+}
+section.services .card .card-body h5 {
+    font-size: 24px;
+    color: #070c0c;
+    margin-bottom: 15px;
+}
+section.services .card .card-body p {
+    font-size: 15px;
+    line-height: 25px;
+    color: #919191;
+    opacity: 0;
+    transition: all 1s ease;
+}
+section.services .card:hover .card-body p {
+    opacity: 1;
+}
+/* End Section.services */
+
+/* Start Section.gallery */
+.no-gutters {padding: 0px;margin: 0px;}
+section.gallery {
+    padding-top: 120px;
+}
+section.gallery .title {
+    margin-bottom: 55px;
+}
+section.gallery .title h3 {
+    font-size: 40px;
+    line-height: 60px;
+    color: #070c0c;
+}
+section.gallery .work-gallery a {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+section.gallery .work-gallery a img {
+    width: 100%;
+}
+section.gallery .work-gallery a .hover {
+    background-color: rgba(43, 175, 199, 0.9);
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    color: #fff;
+    opacity: 0;
+    transition: all .5s ease;
+}
+section.gallery .work-gallery a:hover .hover {
+    opacity: 1;
+}
+section.gallery .work-gallery a .hover .fa-search-plus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+section.gallery .work-gallery .overlay-gallery {
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 20;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 103%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 5% 10%;
+    opacity: 0;
+    margin-top: -100vh;
+    transition: all 1s ease;
+}
+section.gallery .work-gallery .overlay-gallery:target {
+    opacity: 1;
+    margin-top: 0;
+}
+section.gallery .work-gallery .overlay-gallery img {
+    width: 100%;
+}
+section.gallery .gallery-text {
+    padding-top: 50px;
+}
+section.gallery .gallery-text h3 {
+    font-size: 30px;
+    line-height: 50px;
+    color: #16aeca;
+    margin-bottom: 20px;
+}
+section.gallery .gallery-text ul {
+    padding-bottom: 35px;
+    margin-bottom: 30px;
+    padding-right: 0;
+    border-bottom: 2px solid #efefef;
+}
+section.gallery .gallery-text ul li a {
+    color: #555;
+    font-size: 20px;
+    text-decoration: none;
+}
+section.gallery .gallery-text ul li a:hover,
+section.gallery .gallery-text a.visit:hover {
+    text-decoration: underline;
+}
+section.gallery .gallery-text p {
+    font-size: 24px;
+    line-height: 30px;
+    color: #919191;
+    margin-bottom: 45px;
+}
+section.gallery .gallery-text a.visit {
+    font-size: 20px;
+    line-height: 50px;
+    color: #fff;
+    background-color: #16aeca;
+    padding: 0 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    Width: auto;
+    transition: all 0.5s ease-in-out; 
+}
+section.gallery .overlay-gallery a.close {
+    width: auto;
+    color: #16aeca;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    top: 3%;
+    left: 7%;
+    text-decoration: none;
+}
+section.gallery .overlay-gallery a.close:hover {
+    color: #dae413;
+}
+/* End Section.gallery */
+
+/* Start Section.statistics */
+section.statistics {
+    background-image: url(../imgs/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+section.statistics .overlay {
+    background-color: rgba(22, 174, 202, 0.88);
+    padding: 110px 0;
+}
+section.statistics .overlay .stat p {
+    font-size: 18px;
+    line-height: 22px;
+    color: #85ecff;
+}
+section.statistics .overlay .stat .count {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ddfaff;
+}
+/* End Section.statistics */
+
+/* Start Section.contacts */
+section.contacts {
+    padding-top: 120px;
+}
+section.contacts .info h3 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 50px;
+    color: #181c1c;
+}
+section.contacts .info ul {
+    padding: 0;
+}
+section.contacts .info ul li {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    color: #16aeca;
+}
+section.contacts .info ul li .fa-map-marker {
+    margin-left: 5px;
+}
+section.contacts .form {
+    width: 60%;
+    margin: 60px auto;
+}
+section.contacts .form h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #181c1c;
+    padding-bottom: 15px;
+}
+section.contacts .form form input,
+section.contacts .form form textarea {
+    background-color: #f7f7f7;
+    color: #5c5c5c;
+    font-size: 15px;
+    line-height: 25px;
+    border: 2px solid #ececec;
+    margin-bottom: 15px;
+}
+section.contacts .form form button {
+    background-color: #16aeca;
+    color: #fff;
+    font-size: 15px;
+    line-height: 25px;
+    border: none;
+    border-radius: 3px;
+    width: 95px;
+    padding: 10px 25px;
+    margin-right: 10px;
+}
+section.contacts .form form .error {
+    color: red;
+    margin-bottom: 0px;
+}
+/* End Section.contacts */
+
+/* Start footer */
+footer {
+    background-color: #171717;
+    padding: 70px 0;
+}
+footer .about h3,
+footer .connect h3 {
+    color: #85ecff;
+    font-size: 18px;
+    line-height: 45px;
+    margin-bottom: 30px;
+    position: relative;
+}
+footer .about h3:before,
+footer .connect h3:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 35px;
+    height: 2px;
+    background-color: #5c5c5c; 
+}
+footer .about p {
+    color: #919191;
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 60px;
+}
+footer .about .social-media ul,
+footer .connect ul {
+    padding: 0;
+}
+footer .about .social-media ul li {
+    margin-right: 0 !important;
+}
+footer .about .social-media a {
+    background-color: #333;
+    color: #acacac;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 3px;
+    margin-left: 5px;
+    display: block;
+    transition: all .5s ease-in-out;
+}
+footer .about .social-media a:hover {
+    background-color: #16aeca;
+}
+footer .connect ul li{
+    font-size: 18px;
+    line-height: 25px;
+    color: #676767;
+    margin-bottom: 35px;
+}
+footer .connect ul li i {
+    background-color: #282828;
+    color: #bababa;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 15px;
+    border-radius: 3px;
+    text-align: center;
+}
+div.copyright {
+    background-color: #111;
+    color: #919191;
+    padding: 30px 0;
+    font-family: ar-font;
+}
+div.copyright p {
+    margin-bottom: 0;
+}
+/* End footer */
+
+
+
+
+
+/* Start Responsive */
+
+
+@media(max-width:1199.5px) and (min-width:991.5px) {
+    section.contacts .map iframe {
+        width: 500px;
+    }
+    section.contacts .info ul li {
+        font-size: 16px;
+        line-height: 25px;
+    }
+}
+@media(max-width:1190px) {
+    section.gallery .gallery-text h3 {
+        font-size: 23px;
+        line-height: 35px;
+        margin-bottom: 10px;
+    }
+    section.gallery .overlay-gallery a.close {
+        font-size: 40px;
+        position: absolute;
+        top: 0%;
+        left: 5%;
+    }
+    section.gallery .gallery-text ul {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    section.gallery .gallery-text ul li a {
+        font-size: 16px;
+    }
+    section.gallery .gallery-text p {
+        font-size: 18px;
+        line-height: 27px;
+        margin-bottom: 25px;
+    }
+    section.gallery .gallery-text a.visit {
+        font-size: 18px;
+        line-height: 45px;
+    }
+}
+@media(max-width:991.5px) {
+    header .slider .carousel-item .carousel-caption h3 {
+        font-size: 30px;
+        line-height: 45px;
+    }
+    section.services .card:hover {
+        height: 410px;
+    }
+    section.contacts .form {
+        width: 100%;
+    }
+}
+@media(max-width:767.5px) {
+    nav.navbar .container {
+        max-width: 100% !important;
+        flex-direction: row-reverse;
+        padding: 0;
+    }
+    nav ul.navbar-nav {
+        padding-right: 0;
+        background-color: #16aeca;
+        color: #e8e8e8;
+    }
+    nav ul.navbar-nav li.nav-item a.nav-link {
+        padding: 8px;
+    }
+    nav.navbar button.navbar-toggler:focus {
+        box-shadow: none !important;
+    }
+    nav.navbar.noTransparent button.navbar-toggler span{
+        color: #16aeca;
+    }
+    nav.noTransparent ul.navbar-nav {
+        background-color: #fff;
+    }
+    section.services .card {
+        margin-bottom: 20px;
+    }
+    section.services .card:hover {
+        height: 350px;
+    }
+    section.gallery .work-gallery .overlay-gallery img {
+        width: 65%;
+        margin: 0 20%;
+    }
+    section.gallery .gallery-text {
+        text-align: center;
+    }
+    section.contacts .map iframe {
+        width: 100%;
+    }
+    footer .about p {
+        margin-bottom: 30px;
+    }     
+}
+@media(min-width:767.5px) and (max-width:991.5px) {
+    nav ul.navbar-nav li.nav-item a.nav-link {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    nav ul.navbar-nav {
+        padding-right: 0;
+    }
+    section.contacts .map iframe {
+        width: 700px;
+    }
+}
+@media(max-width:690px) {
+    header .slider .carousel-item .carousel-caption h3 {
+        font-size: 25px;
+    }
+}
+@media(max-width:597px) {
+    header .slider .carousel-item .carousel-caption h3 {
+        font-size: 20px;
+        line-height: 35px;
+        padding: 0 10px;
+    }
+}
+
+/* End Responsive */
